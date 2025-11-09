@@ -78,6 +78,11 @@ p {
 }
 
 .header__open-nav-button {
+    position: fixed; /* en lugar de absolute */
+    top: 0;
+    right: 0;
+    padding: 30px;
+    background-color: #3D4841;
     cursor: pointer;
     z-index: 200;
 }
@@ -101,7 +106,7 @@ p {
     justify-content: space-evenly;
 }
 
-.header__checkbox:checked ~ .header__nav {
+.header__checkbox:checked ~ .header__wrapper .header__nav {
     display: flex;
 }
 
