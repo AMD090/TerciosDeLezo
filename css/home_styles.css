@@ -1,10 +1,14 @@
 /* -----MAIN PICTURE SECTION----- */
-.header__main_picture {
+.header__main_picture{
+    container-type: inline-size;
+    container-name: main_picture;
+}
+
+.header__main_picture-container {
+    margin-top: 80px;
     width: 100%;
     height: auto;
     overflow: hidden;
-    container-type: inline-size;
-    container-name: main_picture;
 }
 
 .header__main_picture-item{
@@ -16,11 +20,15 @@
 }
 
 /* -----MAIN PICTURE QUERIES----- */
-@container main_picture (min-width: 850px){
+@container main_picture (min-width: 880px){
+
+    .header__main_picture-container{
+        margin-top: 0;
+    }
 
     .header__main_picture-item{
         height: 100vh;
-}
+    }
 }
 
 /* -----MAIN PICTURE ENDS----- */
@@ -81,6 +89,7 @@
     min-height: 50px;
     margin: 10px;
     text-decoration: none;
+    z-index: 10;
 }
 
 .main__data-description-link-item{
@@ -98,7 +107,7 @@
 
 /* -----MAIN SECTION QUERIES----- */
 
-@container main (min-width: 850px){
+@container main (min-width: 880px){
 
     .main__wrapper{
         flex-direction: row;
@@ -195,7 +204,7 @@
 }
 
 /* -----ACTIVITIES QUERIES----- */
-@container activities (min-width: 850px){
+@container activities (min-width: 880px){
     
     .activities__wrapper{
         width: 70%;
@@ -274,7 +283,7 @@
 
 /* -----TESTIMONILAS QUERIES----- */
 
-@container testimonials (min-width: 850px){
+@container testimonials (min-width: 880px){
     .testimonials__wrapper{
         min-height: 60vh;
     }

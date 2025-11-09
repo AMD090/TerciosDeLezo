@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     color: #A7B4AC;
-    text-wrap: pretty;
 }
 
 @font-face {
@@ -14,6 +13,11 @@
 @font-face {
     font-family: "Mea_Culpa";
     src: url("../fonts/Mea_Culpa/MeaCulpa-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Algerian";
+    src: url("../fonts/Algerian/algerian-regular.ttf") format("truetype");
 }
 
 body {
@@ -37,28 +41,32 @@ h1, h2 {
 
 p {
     text-align: justify;
-    text-wrap: balance;
+    text-wrap: pretty;
 }
 
 /* -----HEADER SECTION----- */
 
 .header {
-    position: fixed;
-    width: 100%;
-    height: 80px;
-    background: linear-gradient(to bottom, #000f, #0006);
-    display: flex;
-    justify-content: space-between;
     container-type: inline-size;
     container-name: header;
-    z-index: 1;
+}
+
+.header__wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #1E2520;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
 }
 
 .header__open-nav-button {
     padding: 30px;
     position: absolute;
     right: 10px; 
-    z-index: 2;
+    z-index: 100;
 }
 
 .header__checkbox {
@@ -72,7 +80,7 @@ p {
     height: 100vh;
     width: 100%;
     top:0;
-    z-index: 1;
+    z-index: 50;
 }
 
 .header__nav-list {
@@ -103,11 +111,14 @@ p {
 
 .header__text_logo{
     margin: 0;
+    font-family: "Algerian";
+    font-size: 2vw;
+    color: #AD1519;
 }
 
 .header__img_logo {
     max-width: 100%;
-    height: 70px;
+    height: 60px;
     margin: 10px 0;
 }
 
@@ -130,24 +141,40 @@ p {
 }
 
 /* -----HEADER QUERIES----- */
-@container header (min-width: 850px){
+@container header (min-width: 880px){
+
+    .header__wrapper {
+        top: 0;
+        background: linear-gradient(to bottom, #000f, #0006);
+        height: 110px;
+    }
+
+    .header__img_logo {
+    max-width: 100%;
+    height: 90px;
+    margin: 10px 0;
+}
+
+    .header__text_logo-container {
+        height: 110px;
+    }
 
     .header__nav{
         display: block;
         position: static;
-        height: auto;
         width: auto;
         background-color: #0000;
         justify-content: space-between;
         z-index: 3;
+        height: 100%;
     }
 
     .header__nav-list {
         flex-direction: row;
-        height: auto;
-        width: auto;
         gap: 20px;
         margin-right: 40px;
+        align-items: center;
+        height: 110px;
     }
 
     .header__open-nav-button {
@@ -158,12 +185,51 @@ p {
 
 /* -----HEADER ENDS----- */
 
+/* -----OPENING PICTURE SECTION----- */
+.opening_picture{
+    container-type: inline-size;
+    container-name: main_picture;
+}
+
+.opening_picture-img-container {
+    position: relative;
+    margin-top: 80px;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.opening_picture-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center; 
+    display: block;
+}
+
+/* -----OPENING PICTURE QUERIES----- */
+@container main_picture (min-width: 880px){
+
+    .opening_picture-img-container{
+        margin-top: 0;
+        height: 50vh;
+    }
+
+}
+
+/* -----OPRNING PICTURE ENDS----- */
+
 
 /* -----FLAG SECTION----- */
 
 .flag{
+    container-type: inline-size;
+    container-name: flag;
+}
+
+.flag__wrapper{
     position: sticky;
-    top:0;
+    top: 0;
 }
 
 .division_flag {
@@ -174,12 +240,20 @@ p {
 
 .division_flag-item-red {
     background-color: #AD1519;
-    height: 20px;
+    height: 5px;
 }
 
 .division_flag-item-yellow {
     background-color: #FABD00;
-    height: 40px;
+    height: 10px;
+}
+
+/* -----FLAG QUERIES----- */
+
+@container flag (min-width: 880px){
+    .flag__wrapper{
+        top:110px;
+    }
 }
 /* -----FLAG ENDS----- */
 
