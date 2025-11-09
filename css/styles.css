@@ -71,7 +71,6 @@ p {
 }
 
 .header__checkbox {
-    display: none;
     position: absolute;
     opacity: 0;
     pointer-events: none;
