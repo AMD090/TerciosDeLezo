@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     color: #A7B4AC;
+    text-wrap: pretty;
 }
 
 @font-face {
@@ -17,7 +18,7 @@
 
 @font-face {
     font-family: "Algerian";
-    src: url("../fonts/Algerian/algerian-regular.ttf") format("truetype");
+    src: url("../fonts/Algerian/algerian-regular.ttf");
 }
 
 body {
@@ -41,7 +42,7 @@ h1, h2 {
 
 p {
     text-align: justify;
-    text-wrap: pretty;
+    text-wrap: balance;
 }
 
 /* -----HEADER SECTION----- */
@@ -63,22 +64,14 @@ p {
 }
 
 .header__open-nav-button {
+    position: relative;
     padding: 30px;
-    position: absolute;
-    right: 10px; 
-    background-color: #3D4841;
     z-index: 100;
+    background-color: #0006;
 }
 
 .header__checkbox {
-    position: absolute;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.header__open-nav-button {
-    cursor: pointer;
-    z-index: 200;
+    display: none;
 }
 
 .header__nav {
@@ -120,8 +113,8 @@ p {
 .header__text_logo{
     margin: 0;
     font-family: "Algerian";
-    font-size: 2vw;
-    color: #AD1519;
+    color:#AD1519;
+
 }
 
 .header__img_logo {
@@ -149,7 +142,7 @@ p {
 }
 
 /* -----HEADER QUERIES----- */
-@container header (min-width: 880px){
+@container header (min-width: 850px){
 
     .header__wrapper {
         top: 0;
@@ -356,7 +349,7 @@ p {
 
 /* -----FOOTER QUERIES----- */
 
-@container footer (min-width: 850px){
+@container footer (min-width: 880px){
     .footer-logo-container{
         display: flex;
     }
