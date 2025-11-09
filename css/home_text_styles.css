@@ -9,13 +9,14 @@
     display: grid;
     grid-template-columns: 1fr;
     align-items: start;
-    align-content: center;
     justify-content: center;
 }
 
 .sections__main{
-    max-width: 1000px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .sections__main h2{
@@ -26,6 +27,7 @@
     font-size: 1.5rem;
     margin-top: 50px;
     padding: 0 20px;
+
 }
 
 .sections__img-container {
