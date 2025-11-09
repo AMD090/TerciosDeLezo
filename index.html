@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="icon" href="img/logo/6.png" type="image/png">
+
+    <script>
+        const stylesheets = ["css/styles.css", "css/home_styles.css"];
+
+        stylesheets.forEach(file => {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = file + "?v=" + Date.now();
+            document.head.appendChild(link);
+        });
+    </script>
     <title>Inicio</title>
 
 </head>
@@ -31,11 +46,11 @@
 
         <nav class="header__nav">
             <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#">Inicio</a></li>
-                <li class="header__nav-item" ><a href="#">Galería</a></li>
-                <li class="header__nav-item" ><a href="#">El Campamento</a></li>
-                <li class="header__nav-item" ><a href="#">contacto</a></li>
-                <li class="header__nav-item" ><a href="#">Sobre Nosotros</a></li>
+                <li class="header__nav-item"><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item" ><a href="about_us.html">Sobre Nosotros</a></li>
+                <li class="header__nav-item" ><a href="camp.html">El Campamento</a></li>
+                <li class="header__nav-item" ><a href="gallery.html">Galería</a></li>
+                <li class="header__nav-item" ><a href="contact.html">Contacto</a></li>
             </ul>
         </nav>
 
@@ -44,6 +59,7 @@
     <!--Video Inicial-->
     <div class="header__main_picture">
         <video class="header__main_picture-item" autoplay muted loop src="video/video1(1).mp4"></video>
+</iframe>
     </div>
 
     <!--Bandera de España-->
@@ -65,6 +81,7 @@
                     <div class="main__data-description">
                         <h1>Campamento Tercios de Lezo</h1>
                         <p>Han transcurrido 15 años desde que el Campamento TERCIOS DE LEZO elaboró su primer programa de actividades único en España, destinado a jóvenes de ambos sexos, desde los 10 años en adelante. </p>
+                        <a class="main__data-description-link" href="home_text.html"><div class="main__data-description-link-item"><p>⬇</p></div></a>
                     </div>
                 </div>
             </div>
@@ -76,16 +93,18 @@
 
     <!--actividades-->
     <section class="activities">
-        <h2 class="activities__h2">Actividades</h2>
         <div class="activities__wrapper">
-            <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
-            <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
-            <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
-            <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
-            <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
-            <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
-            <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
-            <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
+            <h2 class="activities__h2">Actividades</h2>
+            <div class="activities__grid">
+                <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
+                <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
+                <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
+                <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
+                <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
+                <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
+                <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
+                <div class="actividades__img-container"><img class="actividades__img" src="img/imagenes_secundarias/img1.png"></div>
+            </div>
         </div>
     </section>
 
@@ -115,6 +134,7 @@
         </div>
     </section>
 
+    <!--Footer-->
     <footer class="footer">
         <div class="footer__wrapper">
 
@@ -126,11 +146,11 @@
 
             <div class="footer-item footer-item__nav">
                 <ul class="footer__nav-list">
-                    <li class="footer__nav-item"><a href="#">Inicio</a></li>
-                    <li class="footer__nav-item" ><a href="#">Galería</a></li>
-                    <li class="footer__nav-item" ><a href="#">El Campamento</a></li>
-                    <li class="footer__nav-item" ><a href="#">contacto</a></li>
-                    <li class="footer__nav-item" ><a href="#">Sobre Nosotros</a></li>
+                    <li class="header__nav-item"><a href="index.html">Inicio</a></li>
+                    <li class="header__nav-item" ><a href="about_us.html">Sobre Nosotros</a></li>
+                    <li class="header__nav-item" ><a href="camp.html">El Campamento</a></li>
+                    <li class="header__nav-item" ><a href="gallery.html">Galería</a></li>
+                    <li class="header__nav-item" ><a href="contact.html">Contacto</a></li>
                 </ul>
             </div>
 

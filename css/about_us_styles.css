@@ -1,0 +1,172 @@
+/* -----MAIN SECTION----- */
+
+.main {
+    container-type: inline-size;
+    container-name: main;
+}
+
+.main__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.main__wrapper h1 {
+    padding: 20px;
+    text-align: center;
+}
+
+.main__wrapper p{
+    padding: 12px;
+}
+
+/* -----MAIN QUERIES----- */
+
+@container main (min-width: 850px){
+    .main__wrapper{
+        width: 70%;
+    }
+}
+
+/* -----MAIN ENDS----- */
+
+
+/* -----PROVENANCES SECTION----- */
+
+.provenances{
+    container-type: inline-size;
+    container-name: provenances;
+    background-color: #0003;
+    z-index: -3;
+}
+
+.provenances__wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    max-width: 1400px;
+    margin-top: 50px;
+}
+
+.provenances__wrapper h2{
+    text-align: center;
+    padding: 12px;
+}
+
+.provenances__wrapper > p{
+    text-align: center;
+    font-size: 5rem;
+}
+
+.provenances__grid{
+    display: grid;
+    place-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    overflow: hidden;
+}
+
+.provenances__grid-item{   
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.provenances__grid-item p{
+    text-align: center;
+}
+
+.provenances__grid-item-dropdown{
+    display: none;
+    margin-top: 5px;
+    background-color: #1E2520;
+    text-align: center;
+    top:100%;
+    z-index: -2;
+}
+
+.provenances__grid-item-img-container{
+    max-width: 500px;
+}
+
+.provenances__grid-item-img{
+    height: 100px;
+    z-index: -3;
+}
+
+.provenances__grid-item:is(:hover, :active) .provenances__grid-item-dropdown {
+    display: block;
+}
+
+/* -----PROVENANCES QUERIES----- */
+
+@container provenances (min-width: 850px){
+    .provenances__grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .provenances__wrapper{
+        width: 70%;
+    }
+}
+
+/* -----PROVENANCES ENDS----- */
+
+
+/* -----INSTRUCTORS SECTION----- */
+
+.instructors{
+    container-type: inline-size;
+    container-name: instructors;
+}
+
+.instructors__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: auto;
+    width: 100%;
+    gap: 20px;
+}
+
+.instructors__wrapper p{
+    padding: 12px;
+}
+
+
+.instructors-img__wrapper{
+    background-color: #0003; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+.instructors-img-container{
+    width: 70%;
+    padding: 12px;
+}
+
+.instructors-img{
+    width: 100%;
+}
+
+/* -----INSTRUCTORS QUERIES----- */
+
+@container instructors (min-width: 850px){
+    .instructors__wrapper{
+        width: 70%;
+    }
+}
+
+/* -----INSTRUCTORS ENDS----- */

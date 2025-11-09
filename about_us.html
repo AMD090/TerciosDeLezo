@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <link rel="icon" href="img/logo/6.png" type="image/png">
+
+    <script>
+        const stylesheets = ["css/styles.css", "css/about_us_styles.css"];
+
+        stylesheets.forEach(file => {
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.href = file + "?v=" + Date.now();
+            document.head.appendChild(link);
+        });
+    </script>
+    <title>Sobre Nosotros</title>
+
+</head>
+<body>
+
+    <!--Header-->
+    <header class="header">
+
+        <div class="header__logo-container">
+            <div class="header__img_logo-container">
+                <img class="header__img_logo" src="img/logo/6.png">
+            </div>
+
+            <div class="header__text_logo-container">
+                <p class="header__text_logo">"El honor mi causa,</p>
+                <p class="header__text_logo">el valor mi medio"</p>
+            </div>
+        </div>
+        
+
+        <input class="header__checkbox" type="checkbox" id="open-menu">
+        <label for="open-menu" class="header__open-nav-button" role="button">Menú</label>
+
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item" ><a href="about_us.html">Sobre Nosotros</a></li>
+                <li class="header__nav-item" ><a href="camp.html">El Campamento</a></li>
+                <li class="header__nav-item" ><a href="gallery.html">Galería</a></li>
+                <li class="header__nav-item" ><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!--Bandera de España-->
+    <div class="flag">
+        <div class="division_flag">
+            <div class="division_flag-item-red"></div>
+            <div class="division_flag-item-yellow"></div>
+            <div class="division_flag-item-red"></div>
+        </div>
+    </div>
+
+    <!--Main-->
+    <main class="main">
+        <div class="main__wrapper">
+            <h1>Sobre Nosotros</h1>
+            <p>Nos avalan 15 años de experiencia organizando Campamentos de Orientación Militar. Desde su inicio, el Campamento Tercios de Lezo es el primero que se realiza en España con unas características especiales que lo hacen exclusivo.</p>
+        </div>
+    </main>
+
+    <!--provenances-->
+    <section class="provenances">
+        <div class="provenances__wrapper">
+            <h2>Contamos con Instructores procedentes de:</h2>
+            <div class="provenances__grid">
+
+                <div class="provenances__grid-item">
+                    <div class="provenances__grid-item-img-container"><img class="provenances__grid-item-img" src="img/imagenes_secundarias/escudos_ejercito/BRIPAC.png"></div>
+                    <p>BRIPAC</p>
+                    <p class="provenances__grid-item-dropdown">Brigada Paracaidista.</p>
+                </div>
+
+                <div class="provenances__grid-item">
+                    <div class="provenances__grid-item-img-container"><img class="provenances__grid-item-img" src="img/imagenes_secundarias/escudos_ejercito/FGNE.png"></div>
+                    <p>FGNE</p>
+                    <p class="provenances__grid-item-dropdown">Fuerza Guerra Naval Especial de la Armada.</p>
+                </div>
+
+                <div class="provenances__grid-item">
+                    <div class="provenances__grid-item-img-container"><img class="provenances__grid-item-img" src="img/imagenes_secundarias/escudos_ejercito/INFANTERIA_MARINA.png"></div>
+                    <p>IM</p>
+                    <p class="provenances__grid-item-dropdown">Fuerza Infantería de Marina.</p>
+                </div>
+
+                <div class="provenances__grid-item">
+                    <div class="provenances__grid-item-img-container"><img class="provenances__grid-item-img" src="img/imagenes_secundarias/escudos_ejercito/MOE.png"></div>
+                    <p>MOE</p>
+                    <p class="provenances__grid-item-dropdown">Mando Operaciones Especiales del Ejército de Tierra.</p>
+                </div>
+
+                <div class="provenances__grid-item">
+                    <div class="provenances__grid-item-img-container"><img class="provenances__grid-item-img" src="img/imagenes_secundarias/escudos_ejercito/LEGION.png"></div>
+                    <p>LEGIÓN</p>
+                    <p class="provenances__grid-item-dropdown">Legión.</p>
+                </div>
+
+                <div class="provenances__grid-item">
+                    <div class="provenances__grid-item-img-container"><img class="provenances__grid-item-img" src="img/imagenes_secundarias/escudos_ejercito/UME.png"></div>
+                    <p>UME</p>
+                    <p class="provenances__grid-item-dropdown">Unidad Militar de Emergencias</p>
+                </div>
+
+                <div class="provenances__grid-item">
+                    <div class="provenances__grid-item-img-container"><img class="provenances__grid-item-img" src="img/imagenes_secundarias/escudos_ejercito/UOE.png"></div>
+                    <p>UOE</p>
+                    <p class="provenances__grid-item-dropdown">Unidad Operaciones Especiales de la Fuerza de Infantería de Marina.</p>
+                </div>
+
+                <div class="provenances__grid-item">
+                    <div class="provenances__grid-item-img__container"><img class="provenances__grid-item-img" src="img/imagenes_secundarias/escudos_ejercito/CAZADORES_MONTAÑA.png"></div>
+                    <p>CM</p>
+                    <p class="provenances__grid-item-dropdown">Cazadores de Montaña.</p>
+                </div>
+            </div>
+            <p>...</p>
+        </div>
+    </section>
+
+    <!--Instructors-->
+    <section class="instructors">
+        <div class="instructors__wrapper">
+            <p>Nuestros Instructores están formados, titulados y capacitados al 100% para garantizar a nuestros Cadetes la máxima seguridad en el disfrute y aprendizaje de todas las actividades o ejercicios.</p>
+        </div>
+        <div class="instructors-img__wrapper">
+            <div class="instructors-img-container"><img class="instructors-img" src="img/imagenes_secundarias/instructores.png"></div>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer__wrapper">
+
+            <div class="footer-item footer-item__social_network">
+                <div class="footer-item__social_network-img-container"><img class="footer-item__social_network-img" src="img/imagenes_secundarias/img1.png"></div>
+                <div class="footer-item__social_network-img-container"><img class="footer-item__social_network-img" src="img/imagenes_secundarias/img1.png"></div>
+                <div class="footer-item__social_network-img-container"><img class="footer-item__social_network-img" src="img/imagenes_secundarias/img1.png"></div>
+            </div>
+
+            <div class="footer-item footer-item__nav">
+                <ul class="footer__nav-list">
+                    <li class="header__nav-item"><a href="index.html">Inicio</a></li>
+                    <li class="header__nav-item" ><a href="about_us.html">Sobre Nosotros</a></li>
+                    <li class="header__nav-item" ><a href="camp.html">El Campamento</a></li>
+                    <li class="header__nav-item" ><a href="gallery.html">Galería</a></li>
+                    <li class="header__nav-item" ><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-item footer-item__legal"><a href="#">Aviso Legal</a></div>
+
+            <div class="footer-item footer-logo-container">
+                <img class="footer-logo" src="img/logo/3.png">
+            </div>
+        </div>
+    </footer>
+</body>
