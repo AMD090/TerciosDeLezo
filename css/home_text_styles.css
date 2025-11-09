@@ -9,6 +9,7 @@
     display: grid;
     grid-template-columns: 1fr;
     align-items: start;
+    align-content: center;
     justify-content: center;
 }
 
