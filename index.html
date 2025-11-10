@@ -25,41 +25,35 @@
 </head>
 <body>
 
-    <!--Header-->
     <header class="header">
-
         <div class="header__wrapper">
-
             <div class="header__logo-container">
-                <div class="header__img_logo-container">
-                    <img class="header__img_logo" src="img/logo/3.png">
-                </div>
-
+                <img src="img/logo/3.png" alt="Logo" class="header__img_logo" />
                 <div class="header__text_logo-container">
-                    <p class="header__text_logo">"El honor mi causa,</p>
-                    <p class="header__text_logo">el valor mi medio"</p>
-                </div>
+                <p class="header__text_logo">"El honor mi causa</p>
+                <p class="header__text_logo">El valor mi medio"</p>
             </div>
-
-
-            <nav class="header__nav">
-                <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="index.html">Inicio</a></li>
-                    <li class="header__nav-item" ><a href="about_us.html">Sobre Nosotros</a></li>
-                    <li class="header__nav-item" ><a href="camp.html">El Campamento</a></li>
-                    <li class="header__nav-item" ><a href="gallery.html">Galería</a></li>
-                    <li class="header__nav-item" ><a href="contact.html">Contacto</a></li>
-                </ul>
-            </nav>
-
-            <input class="header__checkbox" type="checkbox" id="open-menu">
-            <label for="open-menu" class="header__open-nav-button" role="button">
-                Menú
-            </label>
-
         </div>
 
-    </header>
+        <input type="checkbox" id="nav-toggle" class="header__checkbox" />
+        <label for="nav-toggle" class="header__open-nav-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item" ><a href="about_us.html">Sobre Nosotros</a></li>
+                <li class="header__nav-item" ><a href="camp.html">El Campamento</a></li>
+                <li class="header__nav-item" ><a href="gallery.html">Galería</a></li>
+                <li class="header__nav-item" ><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
 
     <!--Video Inicial-->
     <div class="header__main_picture">

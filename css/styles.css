@@ -55,133 +55,161 @@ p {
 .header__wrapper {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     height: 80px;
     background-color: #1E2520;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    z-index: 10;
-}
-
-.header__open-nav-button {
-    position: relative;
-    padding: 30px;
+    padding: 0 20px;
     z-index: 100;
-    background-color: #0006;
+    transition: background-color 0.3s ease;
 }
 
-.header__checkbox {
-    display: none;
-}
-
-.header__nav {
-    display: none;
-    background-color: #3D4841;
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    top:0;
-    z-index: 50;
-}
-
-.header__nav-list {
+/* Logo */
+.header__logo-container {
     display: flex;
-    flex-direction: column;
-    margin: auto;
-    height: 50vh;
-    padding: 30px;
-    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
 }
 
-.header__checkbox:checked ~ .header__nav {
-    display: flex;
-}
-
-.header__logo-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.header__img_logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
 }
 
 .header__text_logo-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 80px;
 }
 
-.header__text_logo{
+.header__text_logo {
     margin: 0;
     font-family: "Algerian";
-    color:#AD1519;
-
+    color: #AD1519;
+    font-size: 10px;
 }
 
-.header__img_logo {
-    max-width: 100%;
-    height: 60px;
-    margin: 10px 0;
+/* Botón menú móvil */
+.header__open-nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    z-index: 101;
 }
 
-.header__nav-item {
+.header__open-nav-button span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #A7B4AC;
+    border-radius: 2px;
+}
+
+/* Checkbox oculto */
+.header__checkbox {
+    display: none;
+}
+
+/* NAV */
+.header__nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #3D4841;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     list-style: none;
+    text-align: center;
 }
 
-.header__nav-item a{
+.header__nav-item a {
+    color: #A7B4AC;
+    font-size: 1.2rem;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-.header__nav-item a:is(:hover, :active){
+.header__nav-item a:is(:hover, :active) {
+    color: #FFF;
     text-decoration: underline;
 }
 
-.header__main_picture-item {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Mostrar nav al activar checkbox */
+.header__checkbox:checked ~ .header__nav {
+    left: 0;
 }
 
 /* -----HEADER QUERIES----- */
-@container header (min-width: 850px){
-
+@container header (min-width: 870px) {
     .header__wrapper {
-        top: 0;
-        background: linear-gradient(to bottom, #000f, #0006);
         height: 110px;
+        background: linear-gradient(to bottom, #000f, #0006);
+        padding: 0 40px;
+        justify-content: space-between;
     }
 
     .header__img_logo {
-    max-width: 100%;
-    height: 90px;
-    margin: 10px 0;
-}
+        height: 90px;
+    }
 
     .header__text_logo-container {
-        height: 110px;
-    }
-
-    .header__nav{
-        display: block;
-        position: static;
-        width: auto;
-        background-color: #0000;
-        justify-content: space-between;
-        z-index: 3;
-        height: 100%;
-    }
-
-    .header__nav-list {
-        flex-direction: row;
-        gap: 20px;
-        margin-right: 40px;
-        align-items: center;
         height: 110px;
     }
 
     .header__open-nav-button {
         display: none;
     }
+
+    .header__nav {
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        transition: none;
+    }
+
+    .header__nav-list {
+        flex-direction: row;
+        gap: 30px;
+        margin-right: 0;
+    }
+
+    .header__nav-item a {
+        font-size: 1rem;
+    }
 }
+
+@container header (min-width: 970px) {
+    .header__text_logo {
+        font-size: 20px;
+    }
+}
+
 
 
 /* -----HEADER ENDS----- */
